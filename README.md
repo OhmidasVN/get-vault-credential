@@ -11,11 +11,11 @@ yarn add get-vault-credential # with yarn
 
 -   Set up a record with the secret engine KV in the same format as the `.env` file:
 
-    ![Instruction 1](/doc/images/instruction_1.png)
+    ![Instruction 1](https://raw.githubusercontent.com/OhmidasVN/get-vault-credential/main/doc/images/instruction_1.png)
 
 -   Then use the path of the newly created record as the value for the `--path` option:
 
-    ![Instruction 2](/doc/images/instruction_2.png)
+    ![Instruction 2](https://raw.githubusercontent.com/OhmidasVN/get-vault-credential/main/doc/images/instruction_2.png)
 
 -   Execute command `get-vault-credential` with options:
 
@@ -29,4 +29,4 @@ yarn add get-vault-credential # with yarn
 
 -   After executing the command above, you will get the `.env` file with content similar to the content of the record on the vault server along with the version of that record:
 
-    ![Instruction 3](/doc/images/instruction_3.png)
+    ![Instruction 3](https://raw.githubusercontent.com/OhmidasVN/get-vault-credential/main/doc/images/instruction_3.png)
