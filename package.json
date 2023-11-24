@@ -1,6 +1,6 @@
 {
     "name": "get-vault-credential",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "This is a package used to retrieve credential information from the Hashicorp Vault server.",
     "main": "./bin/index.js",
     "bin": {

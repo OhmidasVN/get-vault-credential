@@ -53,25 +53,29 @@ const getCurrentVersion = () => {
 };
 
 const run = async () => {
-    await login();
+    try {
+        await login();
 
-    const {
-        data: { data, metadata },
-    } = await vault.read(config.vault.envPath);
+        const {
+            data: { data, metadata },
+        } = await vault.read(config.vault.envPath);
 
-    const { version } = metadata;
+        const { version } = metadata;
 
-    if (version === getCurrentVersion()) {
-        return;
-    }
-
-    fs.writeFileSync(
-        config.envFilePath,
-        `${versionKey}=${version}\n\n${envObjectToString(data)}`,
-        {
-            encoding: "utf-8",
+        if (version === getCurrentVersion()) {
+            return;
         }
-    );
+
+        fs.writeFileSync(
+            config.envFilePath,
+            `${versionKey}=${version}\n\n${envObjectToString(data)}`,
+            {
+                encoding: "utf-8",
+            }
+        );
+    } catch (err) {
+        console.log("🚀 ~ err:", err);
+    }
 };
 
 run();
